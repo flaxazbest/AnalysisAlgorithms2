@@ -32,7 +32,7 @@ public class Seed {
         questiontext = new QuestionText();
             questiontext.setText("Name {1:NUMERICAL:=77}{1:NUMERICAL:=52}");
         generalfeedback = new QuestionText();
-            generalfeedback.setText("General feedback");
+            generalfeedback.setText("Правильна відповідь:");
         penalty = 1.0/3;
         hidden = 0;
     }
