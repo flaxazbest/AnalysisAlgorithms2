@@ -1,8 +1,11 @@
 package moodle;
 
+import com.sun.xml.internal.txw2.annotation.XmlCDATA;
+
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.Random;
 
 @XmlType(propOrder = { "name", "questiontext", "generalfeedback", "penalty", "hidden" })
@@ -13,9 +16,9 @@ public class Seed {
     private TextFormat textFormat;
     @XmlElement
     private NameText name;
-    @XmlElement
+    //@XmlElement
     private QuestionText questiontext;
-    @XmlElement
+    //@XmlElement
     private QuestionText generalfeedback;
     @XmlElement
     private double penalty;
@@ -32,7 +35,7 @@ public class Seed {
         questiontext = new QuestionText();
             questiontext.setText("Name {1:NUMERICAL:=77}{1:NUMERICAL:=52}");
         generalfeedback = new QuestionText();
-            generalfeedback.setText("Правильна відповідь:");
+            generalfeedback.setText("<pre>General comment</pre>");
         penalty = 1.0/3;
         hidden = 0;
     }
@@ -41,10 +44,12 @@ public class Seed {
         return name.getText();
     }
 
+    @XmlJavaTypeAdapter(value = AdapterCDATA.class)
     public String getQuestiontext() {
         return questiontext.getText();
     }
 
+   @XmlJavaTypeAdapter(value = AdapterCDATA.class)
     public String getGeneralfeedback() {
         return generalfeedback.getText();
     }

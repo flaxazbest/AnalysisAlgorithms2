@@ -1,8 +1,12 @@
 package moodle;
 
+import com.sun.xml.internal.bind.marshaller.CharacterEscapeHandler;
+
 import javax.xml.bind.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.File;
+import java.io.IOException;
+import java.io.Writer;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.logging.Level;
@@ -30,6 +34,13 @@ public class Question {
             JAXBContext context = JAXBContext.newInstance(Question.class);
             Marshaller marshaller = context.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+
+            marshaller.setProperty(CharacterEscapeHandler.class.getName(), new CharacterEscapeHandler() {
+                public void escape(char[] ac, int i, int j, boolean flag,
+                                   Writer writer) throws IOException {
+                    writer.write( ac, i, j ); }
+            });
+
             File file = new File( "dictionary.xml" );
             marshaller.marshal(this, file);
             //marshaller.marshal(createCategory(), System.out);
