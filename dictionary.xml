@@ -2,39 +2,39 @@
 <quiz>
     <question type="cloze">
         <name>
-            <text>Seed 5296</text>
+            <text>Seed 6877</text>
         </name>
         <questiontext format="html">
             <text>Name {1:NUMERICAL:=77}{1:NUMERICAL:=52}</text>
         </questiontext>
         <generalfeedback format="html">
-            <text>General feedback</text>
+            <text>Правильна відповідь:</text>
         </generalfeedback>
         <penalty>0.3333333333333333</penalty>
         <hidden>0</hidden>
     </question>
     <question type="cloze">
         <name>
-            <text>Seed 4221</text>
+            <text>Seed 3803</text>
         </name>
         <questiontext format="html">
             <text>Name {1:NUMERICAL:=77}{1:NUMERICAL:=52}</text>
         </questiontext>
         <generalfeedback format="html">
-            <text>General feedback</text>
+            <text>Правильна відповідь:</text>
         </generalfeedback>
         <penalty>0.3333333333333333</penalty>
         <hidden>0</hidden>
     </question>
     <question type="cloze">
         <name>
-            <text>Seed 8166</text>
+            <text>Seed 9541</text>
         </name>
         <questiontext format="html">
             <text>Name {1:NUMERICAL:=77}{1:NUMERICAL:=52}</text>
         </questiontext>
         <generalfeedback format="html">
-            <text>General feedback</text>
+            <text>Правильна відповідь:</text>
         </generalfeedback>
         <penalty>0.3333333333333333</penalty>
         <hidden>0</hidden>
