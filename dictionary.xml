@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <question type="cloze">
+        <name>
+            <text>Seed 5296</text>
+        </name>
+        <questiontext format="html">
+            <text>Name {1:NUMERICAL:=77}{1:NUMERICAL:=52}</text>
+        </questiontext>
+        <generalfeedback format="html">
+            <text>General feedback</text>
+        </generalfeedback>
+        <penalty>0.3333333333333333</penalty>
+        <hidden>0</hidden>
+    </question>
+    <question type="cloze">
+        <name>
+            <text>Seed 4221</text>
+        </name>
+        <questiontext format="html">
+            <text>Name {1:NUMERICAL:=77}{1:NUMERICAL:=52}</text>
+        </questiontext>
+        <generalfeedback format="html">
+            <text>General feedback</text>
+        </generalfeedback>
+        <penalty>0.3333333333333333</penalty>
+        <hidden>0</hidden>
+    </question>
+    <question type="cloze">
+        <name>
+            <text>Seed 8166</text>
+        </name>
+        <questiontext format="html">
+            <text>Name {1:NUMERICAL:=77}{1:NUMERICAL:=52}</text>
+        </questiontext>
+        <generalfeedback format="html">
+            <text>General feedback</text>
+        </generalfeedback>
+        <penalty>0.3333333333333333</penalty>
+        <hidden>0</hidden>
+    </question>
+</quiz>
