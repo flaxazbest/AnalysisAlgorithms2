@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 26223  -->
+  <question type="cloze">
+    <name>
+      <text>seed = 239798</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre>Напишіть послідовність 13 значень у масиві після послідовної вставки наступних трьох елементів<br />    46 77 45 <br />в уже існуюче максимум-орієнтоване бінарне дерево з 10 елементів:<br />    99 88 59 52 60 23 10 36 38 58<br /><br /><br />{1:NUMERICAL:=99}{1:NUMERICAL:=88}{1:NUMERICAL:=77}{1:NUMERICAL:=52}{1:NUMERICAL:=60}{1:NUMERICAL:=59}{1:NUMERICAL:=10}{1:NUMERICAL:=36}{1:NUMERICAL:=38}{1:NUMERICAL:=58}{1:NUMERICAL:=46}{1:NUMERICAL:=23}{1:NUMERICAL:=45}</pre>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<pre>Правильна відповідь: 99 88 77 52 60 59 10 36 38 58 46 23 45<br /><br />Послідовності після вставки кожного елемента:<br /><br />    99 88 59 52 60 23 10 36 38 58<br />46: 99 88 59 52 60 23 10 36 38 58 46<br />77: 99 88 77 52 60 59 10 36 38 58 46 23<br />45: 99 88 77 52 60 59 10 36 38 58 46 23 45 </pre>]]></text>
+    </generalfeedback>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+  </question>
+
+<!-- question: 26209  -->
+  <question type="cloze">
+    <name>
+      <text>seed = 863916</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre>Напишіть послідовність 13 значень у масиві після послідовної вставки наступних трьох елементів<br />    85 29 39 <br />в уже існуюче максимум-орієнтоване бінарне дерево з 10 елементів:<br />    95 77 88 76 26 63 65 13 25 18<br /><br /><br />{1:NUMERICAL:=95}{1:NUMERICAL:=85}{1:NUMERICAL:=88}{1:NUMERICAL:=76}{1:NUMERICAL:=77}{1:NUMERICAL:=63}{1:NUMERICAL:=65}{1:NUMERICAL:=13}{1:NUMERICAL:=25}{1:NUMERICAL:=18}{1:NUMERICAL:=26}{1:NUMERICAL:=29}{1:NUMERICAL:=39}</pre>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<pre>Правильна відповідь: 95 85 88 76 77 63 65 13 25 18 26 29 39<br /><br />Послідовності після вставки кожного елемента:<br /><br />    95 77 88 76 26 63 65 13 25 18 <br />85: 95 85 88 76 77 63 65 13 25 18 26 <br />29: 95 85 88 76 77 63 65 13 25 18 26 29 <br />39: 95 85 88 76 77 63 65 13 25 18 26 29 39 </pre>]]></text>
+    </generalfeedback>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+  </question>
+
+</quiz>
