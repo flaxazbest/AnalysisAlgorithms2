@@ -13,29 +13,25 @@ public class Seed {
 
     @XmlAttribute(name = "type")
     private QuestionType type;
-    private TextFormat textFormat;
     @XmlElement
-    private NameText name;
-    //@XmlElement
-    private QuestionText questiontext;
-    //@XmlElement
-    private QuestionText generalfeedback;
+    public NameText name;
+    @XmlElement
+    public QuestionText questiontext;
+    @XmlElement
+    public QuestionText generalfeedback;
     @XmlElement
     private double penalty;
     @XmlElement
     private int hidden;
-    private static Random rnd = new Random();
 
     public Seed() {
-        String s = "Seed " + rnd.nextInt(10000);
         name = new NameText();
-            name.setText(s);
+//           name.setText("New name");
         type = QuestionType.cloze;
-        textFormat = TextFormat.html;
         questiontext = new QuestionText();
-            questiontext.setText("Name {1:NUMERICAL:=77}{1:NUMERICAL:=52}");
+//           questiontext.setText("Text");
         generalfeedback = new QuestionText();
-            generalfeedback.setText("<pre>General comment</pre>");
+//            generalfeedback.setText("Feedback");
         penalty = 1.0/3;
         hidden = 0;
     }
@@ -44,12 +40,12 @@ public class Seed {
         return name.getText();
     }
 
-    @XmlJavaTypeAdapter(value = AdapterCDATA.class)
+    //@XmlJavaTypeAdapter(value = AdapterCDATA.class)
     public String getQuestiontext() {
         return questiontext.getText();
     }
 
-   @XmlJavaTypeAdapter(value = AdapterCDATA.class)
+    //@XmlJavaTypeAdapter(value = AdapterCDATA.class)
     public String getGeneralfeedback() {
         return generalfeedback.getText();
     }
@@ -61,4 +57,19 @@ public class Seed {
     public int getHidden() {
         return hidden;
     }
+/*
+    public void setName(String name) {
+        this.name.setText(name);
+    }
+*/
+    /*
+
+    public void setQuestiontext(String questiontext) {
+        this.questiontext.setText(questiontext);
+    }
+    /*
+    public void setGeneralfeedback(String generalfeedback) {
+        this.generalfeedback.setText(generalfeedback);
+    }
+    //*/
 }

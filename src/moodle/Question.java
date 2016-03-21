@@ -29,7 +29,7 @@ public class Question {
         this.question = seeds;
     }
 
-    public void write() {
+    public void write(String fileName) {
         try {
             JAXBContext context = JAXBContext.newInstance(Question.class);
             Marshaller marshaller = context.createMarshaller();
@@ -41,7 +41,7 @@ public class Question {
                     writer.write( ac, i, j ); }
             });
 
-            File file = new File( "dictionary.xml" );
+            File file = new File( fileName + ".xml" );
             marshaller.marshal(this, file);
             //marshaller.marshal(createCategory(), System.out);
         } catch (JAXBException exception) {
@@ -55,7 +55,7 @@ public class Question {
         q.question.add(new Seed());
         q.question.add(new Seed());
         q.question.add(new Seed());
-        q.write();
+        q.write("dictionary");
     }
 
 }

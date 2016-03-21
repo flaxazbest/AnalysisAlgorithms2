@@ -28,6 +28,10 @@ public class MaxPQ<Key extends Comparable<Key>> {
         return max;
     }
 
+    public void clear() {
+        N = 0;
+    }
+
     @Override
     public String toString() {
         if (isEmpty())
@@ -38,6 +42,13 @@ public class MaxPQ<Key extends Comparable<Key>> {
                 s += " " + ((Key)pq[i]).toString();
             return s;
         }
+    }
+
+    public Key[] getPq() {
+        Key[] res = (Key[]) new Comparable[N+1];
+        for (int i = 0; i <= N; i++)
+            res[i] = pq[i];
+        return res;
     }
 
     private void swim(int k) {
@@ -70,6 +81,8 @@ public class MaxPQ<Key extends Comparable<Key>> {
     public static void main(String[] args) {
         MaxPQ<Integer> mpq = new MaxPQ<>(13);
         InputArray ia = new InputArray(13);
+        System.out.println(ia);
+        ia.shuffle();
         System.out.println(ia);
 
         for (int i = 0; i < 10; i++) {
