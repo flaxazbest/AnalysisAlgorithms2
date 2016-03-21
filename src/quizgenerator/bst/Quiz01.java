@@ -14,36 +14,45 @@ import moodle.Seed;
 import bst.BST;
 
 import java.util.Formatter;
+import java.util.Random;
 
 public class Quiz01 {
 
     private static int NUM = 31;
-    private static int GEN = 10;
+    private static int GEN = 12;
+    private static int DEL = 3;
 
     public static void main(String[] args) {
         BST<Integer, Integer> bst = new BST<>();
         InputArray ia = new InputArray(GEN);
         Question q = new Question();
+        Integer[] delList = new Integer[DEL];
+        Random rnd = new Random();
 
         for (int i = 0; i < NUM; i++) {
             Seed seed = new Seed();
 
             Formatter fmt = new Formatter();
-            fmt.format("seed = 0801%02d", i+1);
+            fmt.format("seed = 0802%02d", i+1);
             seed.name.setText(fmt.toString());
 
-            String s = "<pre>Напишіть рівневий порядок БДП яке утвориться після послідовного додавання наступних ключів у порожнє БДП:<br />    ";
-
-            for (int j = 0; j < GEN; j++)
-                s += ia.get(j+GEN) + " ";
-            s += "<br /><br />";
+            String s = "<pre>Початковий рівневий порядок БДП:<br />    ";
             bst.clear();
-
-            String f = "<br /><br />Рівневий порядок БДП після кожного додавання: ";
-            for (int j = 0; j < GEN; j++) {
+            for (int j = 0; j < GEN; j++)
                 bst.put(ia.get(j), ia.get(j));
-                f += "<br />" + ia.get(j) + ":  " + bst.getlevelOrder();
+            s += bst.getlevelOrder() + " <br />Який буде рівневий порядок БДП після " + DEL +  " видалень Хібaрта наступних ключів?<br />   ";
+            for (int j = 0; j < DEL; j++) {
+                delList[j] = ia.get( rnd.nextInt(GEN/DEL) + j*(GEN/DEL) );
+                s += " " + delList[j];
             }
+            s += "<br /><br />";
+
+            String f = "<br />Рівневий порядок БДП після кожного видалення:";
+            for (int j = 0; j < DEL; j++) {
+                bst.delete(delList[j]);
+                f += "<br />" + delList[j] + ":  " + bst.getlevelOrder();
+            }
+
             s += Numeric.toNumeric(bst.getlevelOrder()) + "</pre>";
             f += "</pre>";
             f = "<pre>Правильна відповідь: " + bst.getlevelOrder() + f;
@@ -55,6 +64,6 @@ public class Quiz01 {
             ia.shuffle();
         }
 
-        q.write("BST_01");
+        q.write("BST_02");
     }
 }

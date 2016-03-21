@@ -54,7 +54,6 @@ public class Quiz01 {
             }
             f += "</pre>";
             f = "<pre>Правильна відповідь: " + mpq.toString() + f;
-            seed.questiontext.setText("Question" + i);
             seed.generalfeedback.setText(f);
 
             Numeriacalizator<Integer> numeriacalizator = new Numeriacalizator<>();
