@@ -3,7 +3,9 @@ package bst;
 import java.util.LinkedList;
 
 public class BST<Key extends Comparable<Key>, Value> {
+
     private Node root;
+
     private class Node {
         private Key key;
         private Value val;
@@ -131,6 +133,10 @@ public class BST<Key extends Comparable<Key>, Value> {
         }
         x.N = size(x.left) + size(x.right) + 1;
         return x;
+    }
+
+    public void clear() {
+        root = null;
     }
 
     public String getPreorder() {
