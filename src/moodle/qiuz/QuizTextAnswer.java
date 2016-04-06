@@ -1,8 +1,11 @@
-package moodle;
+package moodle.qiuz;
 
 import com.sun.xml.internal.bind.marshaller.CharacterEscapeHandler;
+import moodle.seed.SeedShort;
 
-import javax.xml.bind.*;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.File;
 import java.io.IOException;
@@ -13,25 +16,21 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @XmlRootElement(name = "quiz")
-public class Question {
+public class QuizTextAnswer {
 
-    public List<Seed> question;
+    public List<SeedShort> question;
 
-    public Question() {
+    public QuizTextAnswer() {
         question = new LinkedList<>();
     }
-/*
-    public List<Seed> getQuestions() {
-        return question;
-    }
-*/
-    public void setQuestions(List<Seed> seeds) {
-        this.question = seeds;
+
+    public void setQuestion(List<SeedShort> question) {
+        this.question = question;
     }
 
     public void write(String fileName) {
         try {
-            JAXBContext context = JAXBContext.newInstance(Question.class);
+            JAXBContext context = JAXBContext.newInstance(QuizTextAnswer.class);
             Marshaller marshaller = context.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 
@@ -51,11 +50,10 @@ public class Question {
     }
 
     public static void main(String[] args) {
-        Question q = new Question();
-        q.question.add(new Seed());
-        q.question.add(new Seed());
-        q.question.add(new Seed());
-        q.write("dictionary");
+        QuizTextAnswer qz = new QuizTextAnswer();
+        qz.question.add(new SeedShort());
+        qz.question.add(new SeedShort());
+        qz.write("test_short");
     }
 
 }

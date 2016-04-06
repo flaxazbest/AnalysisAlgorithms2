@@ -1,6 +1,9 @@
-package moodle;
+package moodle.seed;
 
 import com.sun.xml.internal.txw2.annotation.XmlCDATA;
+import moodle.NameText;
+import moodle.QuestionText;
+import moodle.QuestionType;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;

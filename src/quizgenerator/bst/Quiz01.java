@@ -9,9 +9,9 @@ package quizgenerator.bst;
 
 import additional.InputArray;
 import additional.Numeric;
-import moodle.Question;
-import moodle.Seed;
-import bst.BST;
+import moodle.qiuz.Question;
+import moodle.seed.Seed;
+import algorithms.bst.BST;
 
 import java.util.Formatter;
 import java.util.Random;

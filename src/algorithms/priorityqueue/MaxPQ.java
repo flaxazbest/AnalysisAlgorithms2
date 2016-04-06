@@ -1,4 +1,4 @@
-package priorityqueue;
+package algorithms.priorityqueue;
 
 import additional.InputArray;
 

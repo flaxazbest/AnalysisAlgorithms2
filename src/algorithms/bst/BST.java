@@ -1,4 +1,4 @@
-package bst;
+package algorithms.bst;
 
 import java.util.LinkedList;
 
@@ -169,10 +169,10 @@ public class BST<Key extends Comparable<Key>, Value> {
         /*
         Integer[] arr = {47, 48, 54, 30, 32, 94, 20, 17, 59, 76};
 
-        BST<Integer, Integer> bst = new BST<>();
+        BST<Integer, Integer> algorithms.bst = new BST<>();
         for (int i = 0; i < 10; i++) {
-            bst.put(arr[i], arr[i]);
-            System.out.println(bst.getlevelOrder());
+            algorithms.bst.put(arr[i], arr[i]);
+            System.out.println(algorithms.bst.getlevelOrder());
         }
         //*/
 

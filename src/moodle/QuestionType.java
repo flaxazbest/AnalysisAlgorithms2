@@ -1,5 +1,5 @@
 package moodle;
 
 public enum QuestionType {
-    cloze;
+    cloze, shortanswer;
 }

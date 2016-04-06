@@ -1,5 +1,5 @@
 package moodle;
 
 public enum TextFormat {
-    html;
+    html, moodle_auto_format;
 }

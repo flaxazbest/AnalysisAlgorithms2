@@ -2,9 +2,9 @@ package quizgenerator.priorityqueue;
 
 import additional.InputArray;
 import additional.Numeriacalizator;
-import moodle.Question;
-import moodle.Seed;
-import priorityqueue.MaxPQ;
+import moodle.qiuz.Question;
+import moodle.seed.Seed;
+import algorithms.priorityqueue.MaxPQ;
 
 import java.util.Formatter;
 
