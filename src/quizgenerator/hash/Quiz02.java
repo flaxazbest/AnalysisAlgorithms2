@@ -10,25 +10,25 @@ import java.util.Formatter;
 
 public class Quiz02 {
 
-    private static int NUM = 31;
-    private static int MAX = 10;
+    private static int NUM = 12;
+    private static int MAX = 25;
 
     public static void main(String[] args) {
         Question q = new Question();
-        LinearProbing lp = new LinearProbing();
+        LinearProbing lp = new LinearProbing(MAX);
 
         for (int i = 0; i < NUM; i++) {
             Seed seed = new Seed();
 
             Formatter fmt = new Formatter();
-            fmt.format("seed = 0901%02d", i+1);
+            fmt.format("seed = Final_hash%02d", i+1);
             seed.name.setText(fmt.toString());
 
-            String s = "<pre>Напишіть елементи масиву, що утвориться після вставлення 10 символів у лінійне-сканування хеш таблиці.<br />key  hash<br />---  ----<br />";
+            String s = "<pre>Напишіть елементи масиву, що утвориться після вставлення "+ MAX +" символів у лінійне-сканування хеш таблиці.<br />key  hash<br />---  ----<br />";
             for (int j = 0; j < MAX; j++) {
                 s += lp.getFull(j) + "<br />";
             }
-            s += "Розмірність масиву - 10 елеменів і не змінюється протягом виконання алгоритму.<br />";
+            s += "Розмірність масиву - " + MAX + " елеменів і не змінюється протягом виконання алгоритму.<br />";
 
             String f = "<pre>Вигляд масиву після кожного кроку вставлення:<br />";
             for (int j = 0; j < MAX; j++) {
@@ -43,6 +43,6 @@ public class Quiz02 {
             q.question.add(seed);
             lp.refresh();
         }
-        q.write("Hash_02");
+        q.write("Final_Hash");
     }
 }

@@ -75,6 +75,17 @@ public class LinearProbing {
         refresh();
     }
 
+    public LinearProbing(int max) {
+        MAX = max;
+        rnd = new Random();
+        SIZE = values.length;
+        line = new char[MAX];
+        hash = new int[SIZE];
+        keys = new int[MAX];
+        for (int i= 0; i < MAX; i++) keys[i] = i;
+        refresh();
+    }
+
     public static void main(String[] args) {
         LinearProbing lp = new LinearProbing();
 

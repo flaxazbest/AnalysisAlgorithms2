@@ -9,9 +9,9 @@ import algorithms.priorityqueue.MaxPQ;
 import java.util.Formatter;
 
 public class Quiz02 {
-    private static int NUM = 31;
-    private static int GEN = 10;
-    private static int DEL = 3;
+    private static int NUM = 12;
+    private static int GEN = 25;
+    private static int DEL = 15;
 
     public static void main(String[] args) {
         MaxPQ<Integer> mpq = new MaxPQ<>(GEN);
@@ -22,7 +22,7 @@ public class Quiz02 {
             Seed seed = new Seed();
 
             Formatter fmt = new Formatter();
-            fmt.format("seed = 0702%02d", i+1);
+            fmt.format("seed = DelPQ%02d", i+1);
             seed.name.setText(fmt.toString());
 
             String s = "<pre>Напишіть значення елементів масиву з " + (GEN-DEL) + " значень, який утвориться після " +
@@ -51,6 +51,6 @@ public class Quiz02 {
             ia.shuffle();
         }
 
-        q.write("PriorityQueue_02");
+        q.write("DelPQ");
     }
 }
