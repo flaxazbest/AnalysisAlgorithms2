@@ -1,5 +1,6 @@
 package quizgenerator.dsd.ariphmeticfunctions;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class ANumber {
@@ -9,11 +10,13 @@ public class ANumber {
 
     public ANumber(int n) {
         this.n = n;
+        decomosition = new LinkedList<>();
         int p = 2;
-        while (n > 1) {
+        int t = n;
+        while (t > 1) {
             int k = 0;
-            while ( n % p == 0 ) {
-                n /= p;
+            while ( t % p == 0 ) {
+                t /= p;
                 k++;
             }
             if (k != 0) {
@@ -56,4 +59,7 @@ public class ANumber {
         return f;
     }
 
+    public int getN() {
+        return n;
+    }
 }
